@@ -1,0 +1,27 @@
+import struc
+
+T = struc.create_from(1,"tests.txt")
+S = struc.create_from(5,"tests.txt")
+
+struc.multiply(S,T)
+
+
+w = T.word()
+v = S.word()
+
+T2 = w.youngtableau()
+
+T.visual(1.5, "T.tex")
+T2.visual(1.5, "T2.tex")
+
+z=T2.word()
+
+print(T2.lists)
+print(T.lists)
+
+
+w.youngtableau()
+
+print(struc.are_equiv(w,z)) 
+
+print(w)
