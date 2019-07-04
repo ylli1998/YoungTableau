@@ -1,50 +1,9 @@
 from words import strtoint
 import struc
 
-def K1(v,index):
-	word=strtoint(v)
-	b=len(word)
-	if index+3>b:
-		raise ValueError("K2 Operation impossible")
-	if word[index+2]<word[index]<=word[index+1]:
-		word[index],word[index+1],word[index+2]=word[index],word[index+2],word[index+1]
-		return word
-	else :
-		raise ValueError("K1 Operation impossible")
-def K1_inv(v,index):
-	word=strtoint(v)
-	b=len(word)
-	if index+3>b:
-		raise ValueError("K1_inv Operation impossible")
-	if word[index+1]<word[index]<=word[index+2]:
-		word[index],word[index+1],word[index+2]=word[index],word[index+2],word[index+1]
-		return word
-	else :
-		raise ValueError("K1_inv Operation impossible")
-
-def K2(v,index):
-	word=strtoint(v)
-	b=len(word)
-	if index+3>b:
-		raise ValueError("K2 Operation impossible")
-	if word[index]<=word[index+2]<word[index+1]:
-		word[index],word[index+1],word[index+2]=word[index+1],word[index],word[index+2]
-		return word
-	else :
-		raise ValueError("K2 Operation impossible")
-def K2_inv(v,index):
-	word=strtoint(v)
-	b=len(word)
-	if index+3>b:
-		raise ValueError("K2_inv Operation impossible")
-	if word[index+1]<=word[index+2]<word[index]:
-		word[index],word[index+1],word[index+2]=word[index+1],word[index],word[index+2]
-		return word
-	else :
-		raise ValueError("K2_inv Operation impossible")
 
 
-def multiply(S,T):
+def multiply(S,T): 
     w = T.word()
     w.list.reverse()
     
@@ -100,6 +59,7 @@ def row_insert2(L,x):
 		if L[i]>x:
 			L.insert(i,x)
 			return L
-
+""" The function multiply multiplies two YoungTableaus using the method row_insert .
+Row_insert insert an element into a given youngtableau using string_from_list and row_insert2."""
 
 
