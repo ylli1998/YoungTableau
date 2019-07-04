@@ -54,3 +54,7 @@ def create_from(row, file):
         mylist=Datei.read().splitlines()
         S=mylist[row].replace('"', "")
         return youngtableau(str(S))
+""" from the file struc.py you can call any function you would like be it in ytmath , visual or words .
+create from creates a young tableau from a row of a .txt file .
+visual , creates a .tex file with a youngtableau in in , are equiv tests if two given words are equivalent to each other and everything 
+else is very self explainatory."""
