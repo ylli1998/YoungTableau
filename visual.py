@@ -35,3 +35,6 @@ def print_tex(L,boxlength, filename):
                     file_object.write('\end{figure}\n')
                     file_object.write('\end{document}')
                     file_object.close()
+"""supports the visulaisation of the youngtableau in LaTex if a youngtableau is given. Boxlength would be the length of each box 
+in which you would like to save the numbers and filename is the name of the file you would like to save the data for example "YT.tex" as
+it has to be a .tex file"""
